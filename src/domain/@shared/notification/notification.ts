@@ -25,6 +25,6 @@ export default class Notification {
         message += `${error.context}: ${error.message},`;
       }
     });
-    return message;
+    return message.endsWith(",") ? message.slice(0, -1) : message;
   }
 }
